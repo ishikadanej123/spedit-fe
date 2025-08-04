@@ -1,5 +1,8 @@
-import Homepage from "./imports/Home/ui/Homepage";
+import React from "react";
+import Homepage from "./imports/Home/ui/page/Homepage";
 
-export default async function IndexPage() {
+const page = () => {
   return <Homepage />;
-}
+};
+
+export default page;
