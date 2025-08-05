@@ -1,8 +1,8 @@
 import React from "react";
-import Homepage from "./imports/Home/ui/page/Homepage";
+import Homenew from "./imports/Home/ui/page/Homenew";
 
 const page = () => {
-  return <Homepage />;
+  return <Homenew />;
 };
 
 export default page;

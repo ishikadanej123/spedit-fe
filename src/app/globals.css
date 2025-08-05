@@ -1,3 +1,8 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import url("../../styles/font.css");
+
 :root {
   --background: #ffffff;
   /* --foreground: #171717; */

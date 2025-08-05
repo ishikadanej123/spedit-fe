@@ -1,135 +1,210 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import imageUrlBuilder from "@sanity/image-url";
-import { client, HERO_BANNER_QUERY } from "../../../../../../lib/sanity";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
-
-const builder = imageUrlBuilder(client);
-function urlFor(source) {
-  return builder.image(source).url();
-}
+import React from "react";
 
 const HeroSection = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    client.fetch(HERO_BANNER_QUERY).then(setData);
-  }, []);
-
-  if (!data) return null;
-
-  const bgImage = data?.mainImages?.[0]?.asset && urlFor(data.mainImages[0]);
-
   return (
-    <Container>
-      <HeroBanner>
-        <Content>
-          <BadgeRow>
-            <Badge>{data.discount}</Badge>
-            <Badge>{data.label}</Badge>
-          </BadgeRow>
-          <MainTitle>{data.title}</MainTitle>
-          <Subtitle>{data.subtitle}</Subtitle>
-          <CTA href={data.ctaLink}>
-            <CtaText>{data.ctaText}</CtaText>
-            <Icon>
-              <IoIosArrowDroprightCircle />
-            </Icon>
-          </CTA>
-        </Content>
-        <Image backgroundImage={bgImage}></Image>
-      </HeroBanner>
-      <RightBanner>hey</RightBanner>
-    </Container>
+    <section className="hero-area position-relative">
+      <div className="slider-four">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 col-12 custom-width-70">
+              <div className="slider-active slider-active-four common-dots">
+                <div
+                  className="single-slider slider-height-four d-flex align-items-center"
+                  data-background="img/slider/slider-home-four-1.jpg"
+                >
+                  <div className="hero-caption-four ml-50">
+                    <div
+                      className="sli-offer mb-15"
+                      data-animation="fadeInUp"
+                      data-delay=".2s"
+                    >
+                      <span>-28%</span>
+                      <span>Hot</span>
+                    </div>
+                    <h2 data-animation="fadeInUp" data-delay=".4s">
+                      Fitted Mask N95 Care Supplies
+                    </h2>
+                    <p data-animation="fadeInUp" data-delay=".6s">
+                      Make Sure Your Hand Are Clean With Best Quality Sanitizers
+                      Product By Bagy.
+                    </p>
+                    <a
+                      href="#"
+                      className="common-link"
+                      data-animation="fadeInUp"
+                      data-delay=".8s"
+                    >
+                      Start Shopping
+                      <i className="fas fa-chevron-circle-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="single-slider slider-height-four d-flex align-items-center"
+                  data-background="img/slider/slider-home-four-2.jpg"
+                >
+                  <div className="hero-caption-four ml-50">
+                    <div
+                      className="sli-offer mb-15"
+                      data-animation="fadeInUp"
+                      data-delay=".2s"
+                    >
+                      <span>-28%</span>
+                      <span>Hot</span>
+                    </div>
+                    <h2 data-animation="fadeInUp" data-delay=".4s">
+                      Dry Hand Gel Anti-Septic Persea
+                    </h2>
+                    <p data-animation="fadeInUp" data-delay=".6s">
+                      Make Sure Your Hand Are Clean With Best Quality Sanitizers
+                      Product By Bagy.
+                    </p>
+                    <a
+                      href="#"
+                      className="common-link"
+                      data-animation="fadeInUp"
+                      data-delay=".8s"
+                    >
+                      Start Shopping
+                      <i className="fas fa-chevron-circle-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="single-slider slider-height-four d-flex align-items-center"
+                  data-background="img/slider/slider-home-four-1.jpg"
+                >
+                  <div className="hero-caption-four ml-50">
+                    <div
+                      className="sli-offer mb-15"
+                      data-animation="fadeInUp"
+                      data-delay=".2s"
+                    >
+                      <span>-28%</span>
+                      <span>Hot</span>
+                    </div>
+                    <h2 data-animation="fadeInUp" data-delay=".4s">
+                      Fitted Mask N95 Care Supplies
+                    </h2>
+                    <p data-animation="fadeInUp" data-delay=".6s">
+                      Make Sure Your Hand Are Clean With Best Quality Sanitizers
+                      Product By Bagy.
+                    </p>
+                    <a
+                      href="#"
+                      className="common-link"
+                      data-animation="fadeInUp"
+                      data-delay=".8s"
+                    >
+                      Start Shopping
+                      <i className="fas fa-chevron-circle-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="single-slider slider-height-four d-flex align-items-center"
+                  data-background="img/slider/slider-home-four-2.jpg"
+                >
+                  <div className="hero-caption-four ml-50">
+                    <div
+                      className="sli-offer mb-15"
+                      data-animation="fadeInUp"
+                      data-delay=".2s"
+                    >
+                      <span>-28%</span>
+                      <span>Hot</span>
+                    </div>
+                    <h2 data-animation="fadeInUp" data-delay=".4s">
+                      Dry Hand Gel Anti-Septic Persea
+                    </h2>
+                    <p data-animation="fadeInUp" data-delay=".6s">
+                      Make Sure Your Hand Are Clean With Best Quality Sanitizers
+                      Product By Bagy.
+                    </p>
+                    <a
+                      href="#"
+                      className="common-link"
+                      data-animation="fadeInUp"
+                      data-delay=".8s"
+                    >
+                      Start Shopping
+                      <i className="fas fa-chevron-circle-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 custom-width-30 d-none d-lg-block">
+              <div className="sli-banner mb-30">
+                <img
+                  src="img/slider/slider-banner-1.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="sli-banner-text">
+                  <h5 className="f-700">Medical Tools Steam Vipozer</h5>
+                  <span>Free Shipping Now!</span>
+                  <a href="shop.html" className="common-link">
+                    buy now <i className="fas fa-chevron-circle-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="sli-banner">
+                <img
+                  src="img/slider/slider-banner-2.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="sli-banner-text">
+                  <h5 className="f-700">Hight Quality Hand Sanitizer</h5>
+                  <span>Get Upto 60% OFF</span>
+                  <a href="shop.html" className="common-link">
+                    buy now <i className="fas fa-chevron-circle-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-md-6 d-md-block d-lg-none">
+              <div className="sli-banner mt-30">
+                <img
+                  src="img/slider/slider-banner-1.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="sli-banner-text">
+                  <h5 className="f-700">Medical Tools Steam Vipozer</h5>
+                  <span>Free Shipping Now!</span>
+                  <a href="shop.html" className="common-link">
+                    buy now <i className="fas fa-chevron-circle-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 d-md-block d-lg-none">
+              <div className="sli-banner mt-30">
+                <img
+                  src="img/slider/slider-banner-2.jpg"
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="sli-banner-text">
+                  <h5 className="f-700">Hight Quality Hand Sanitizer</h5>
+                  <span>Get Upto 60% OFF</span>
+                  <a href="shop.html" className="common-link">
+                    buy now <i className="fas fa-chevron-circle-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
 export default HeroSection;
-
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  gap: 30px;
-  padding: 40px;
-`;
-
-const HeroBanner = styled.div`
-  display: flex;
-  background-color: #c9eef6;
-  width: 72%;
-`;
-
-const Image = styled.div`
-  min-width: 60%;
-  width: 100%;
-  color: black;
-  background-image: ${({ backgroundImage }) =>
-    backgroundImage ? `url(${backgroundImage})` : "none"};
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 620px;
-`;
-
-const RightBanner = styled.div`
-  width: 16%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 371px;
-  width: 100%;
-  justify-content: center;
-  padding-left: 50px;
-`;
-
-const BadgeRow = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-`;
-
-const Badge = styled.span`
-  background: #fff;
-  color: #000;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-`;
-
-const MainTitle = styled.h1`
-  font-size: 34px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 35px;
-`;
-
-const Subtitle = styled.p`
-  font-size: 14px;
-  color: black;
-  margin-bottom: 30px;
-`;
-
-const CTA = styled.a`
-  display: flex;
-  align-items: center;
-`;
-
-const CtaText = styled.div`
-  font-weight: 800;
-  text-transform: uppercase;
-  color: black;
-  font-size: 13px;
-`;
-
-const Icon = styled.div`
-  margin-left: 10px;
-  color: black;
-  display: flex;
-  align-items: center;
-`;
