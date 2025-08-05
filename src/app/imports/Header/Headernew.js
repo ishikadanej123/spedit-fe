@@ -20,145 +20,15 @@ const Headernew = () => {
                   <nav id="mobile-menu-four">
                     <ul>
                       <li className="has-dropdown">
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
-                        <a href="about.html">About</a>
+                        <a href="about">About</a>
                       </li>
                       <li className="mega-menu">
                         <a href="shop.html">Shop</a>
-                        <ul className="submenu">
-                          <li>
-                            <a href="#">Category View</a>
-                            <ul className="submenu">
-                              <li>
-                                <a href="shop-2-col.html">Shop 2 Column</a>
-                              </li>
-                              <li>
-                                <a href="shop-2-col-right-sidebar.html">
-                                  Shop 2 Right Sidebar
-                                </a>
-                              </li>
-                              <li>
-                                <a href="shop-4-col.html">Shop 4 Column Full</a>
-                              </li>
-                              <li>
-                                <a href="shop-list-view.html">Shop List View</a>
-                              </li>
-                              <li>
-                                <a href="shop-no-sidebar.html">
-                                  Shop No Sidebar
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="#">Category View</a>
-                            <ul className="submenu">
-                              <li>
-                                <a href="shop.html">Sidebar Left</a>
-                              </li>
-                              <li>
-                                <a href="shop-right-sidebar.html">
-                                  Sidebar Right
-                                </a>
-                              </li>
-                              <li>
-                                <a href="shop-4-col.html">Style 01</a>
-                              </li>
-                              <li>
-                                <a href="shop-2-col-right-sidebar.html">
-                                  Style 02
-                                </a>
-                              </li>
-                              <li>
-                                <a href="shop-2-col.html">Style 03</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="#">Products Types</a>
-                            <ul className="submenu">
-                              <li>
-                                <a href="product-details.html">
-                                  Simple Product
-                                </a>
-                              </li>
-                              <li>
-                                <a href="product-details.html">
-                                  Variable Product
-                                </a>
-                              </li>
-                              <li>
-                                <a href="product-details-grouped.html">
-                                  Product Grouped
-                                </a>
-                              </li>
-                              <li>
-                                <a href="product-details-right.html">
-                                  Thumb Right Side
-                                </a>
-                              </li>
-                              <li>
-                                <a href="product-details-2.html">
-                                  Thumb Bottom Side
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
                       </li>
-                      <li>
-                        <a href="blog.html">News</a>
-                        <ul className="submenu">
-                          <li>
-                            <a href="blog.html">Blog Standart</a>
-                          </li>
-                          <li>
-                            <a href="blog-left-sidebar.html">
-                              Blog Left Sidebar
-                            </a>
-                          </li>
-                          <li>
-                            <a href="blog-no-sidebar.html">Blog No Sidebar</a>
-                          </li>
-                          <li>
-                            <a href="blog-2-col.html">Blog 2 Column</a>
-                          </li>
-                          <li>
-                            <a href="blog-2-col-mas.html">Blog 2 Col Masonry</a>
-                          </li>
-                          <li>
-                            <a href="blog-3-col.html">Blog 3 Column</a>
-                          </li>
-                          <li>
-                            <a href="blog-3-col-mas.html">Blog 3 Col Masonry</a>
-                          </li>
-                          <li>
-                            <a href="blog-details.html">Blog Details</a>
-                          </li>
-                          <li>
-                            <a href="blog-details-audio.html">
-                              Blog Details Audio
-                            </a>
-                          </li>
-                          <li>
-                            <a href="blog-details-video.html">
-                              Blog Details Video
-                            </a>
-                          </li>
-                          <li>
-                            <a href="blog-details-gallery.html">
-                              Blog Details Gallery
-                            </a>
-                          </li>
-                          <li>
-                            <a href="blog-details-left-sidebar.html">
-                              Details Left Sidebar
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
+
                       <li>
                         <a href="#">Pages</a>
                         <ul className="submenu">
