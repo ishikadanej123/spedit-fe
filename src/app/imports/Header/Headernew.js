@@ -26,7 +26,7 @@ const Headernew = () => {
                         <a href="about">About</a>
                       </li>
                       <li className="mega-menu">
-                        <a href="shop.html">Shop</a>
+                        <a href="shop">Shop</a>
                       </li>
 
                       <li>
