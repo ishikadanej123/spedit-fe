@@ -453,11 +453,11 @@ a.common-link:hover {
 .basic-bar:hover span.bar3 {
   width: 17px;
 }
-.header-left-icon a {
+.header-left-icon span {
   color: #040404;
   margin-left: 45px;
 }
-.header-left-icon a:hover {
+.header-left-icon span:hover {
   color: #3e976c;
 }
 
@@ -541,12 +541,13 @@ a.common-link:hover {
   position: relative;
   padding: 49px 0px;
 }
-.main-menu ul li a {
+.main-menu ul li span {
   font-size: 14px;
   font-weight: 800;
   color: #000;
+  cursor: pointer;
 }
-.main-menu ul li:hover > a {
+.main-menu ul li:hover > span {
   color: #3e976c;
 }
 .main-menu ul li ul.submenu {
@@ -576,14 +577,14 @@ a.common-link:hover {
 .main-menu ul li ul.submenu li:last-child {
   border-bottom: none;
 }
-.main-menu ul li ul.submenu li a {
+.main-menu ul li ul.submenu li span {
   font-size: 13px;
   font-weight: 700;
   color: #000;
   display: inline-block;
   position: relative;
 }
-.main-menu ul li ul.submenu li a:before {
+.main-menu ul li ul.submenu li span:before {
   content: "";
   width: 0;
   height: 1px;
@@ -595,15 +596,15 @@ a.common-link:hover {
   transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
   background: currentColor;
 }
-.main-menu ul li ul.submenu li:hover > a:before {
+.main-menu ul li ul.submenu li:hover > span:before {
   width: 100%;
   left: 0;
   right: auto;
 }
-.main-menu ul li ul.submenu li:hover > a {
+.main-menu ul li ul.submenu li:hover > span {
   color: #3e976c;
 }
-.header-left-icon a {
+.header-left-icon span {
   margin-left: 35px;
 }
 /*header home three start*/
@@ -657,7 +658,7 @@ a.common-link:hover {
 .main-menu-4 ul li {
   padding: 46px 0px;
 }
-.main-menu-4 ul li a {
+.main-menu-4 ul li span {
   font-weight: 700;
 }
 .main-menu ul li a i {
