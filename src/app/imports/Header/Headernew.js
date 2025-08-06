@@ -1,9 +1,27 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
 const Headernew = () => {
   const router = useRouter();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMobileMenuOpen = () => {
+    setIsMenuOpen(true);
+    document.body.classList.add("on-side");
+  };
+
+  const handleMobileMenuClose = () => {
+    setIsMenuOpen(false);
+    document.body.classList.remove("on-side");
+  };
+
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+
+  const toggleMobileDropdown = () => {
+    setIsMobileDropdownOpen((prev) => !prev);
+  };
 
   return (
     <>
@@ -119,9 +137,13 @@ const Headernew = () => {
               </div>
               <div className="col-2 col-md-1 d-block d-lg-none">
                 <div className="hamburger-menu text-right">
-                  <a href="javascript:void(0);">
+                  <span
+                    type="button"
+                    onClick={handleMobileMenuOpen}
+                    className="menu-trigger-button"
+                  >
                     <i className="fa-solid fa-bars" />
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -130,59 +152,89 @@ const Headernew = () => {
       </header>
       {/* header end */}
       {/* slide-bar start */}
-      <aside className="slide-bar">
+      <aside className={`slide-bar ${isMenuOpen ? "show" : ""}`}>
         <div className="close-mobile-menu">
-          <a href="javascript:void(0);">
+          <span
+            type="button"
+            onClick={handleMobileMenuClose}
+            className="menu-close-button"
+          >
             <i className="fa-solid fa-times" />
-          </a>
+          </span>
         </div>
         {/* side-mobile-menu start */}
         <nav className="side-mobile-menu">
           <ul id="mobile-menu-active">
             <li>
-              <a href="index.html">Home</a>
+              <span onClick={() => router.push("/")}>Home</span>
             </li>
             <li>
-              <a href="about.html">About</a>
+              <span onClick={() => router.push("/about")}>About</span>
             </li>
-            <li className="has-dropdown">
-              <a href="shop.html">Shop</a>
+            <li>
+              <span onClick={() => router.push("/shop")}>Shop</span>
             </li>
 
-            <li className="has-dropdown">
-              <a href="#">Pages</a>
-              <ul className="submenu">
+            <li
+              className={`has-dropdown ${isMobileDropdownOpen ? "show" : ""}`}
+            >
+              <span
+                onClick={toggleMobileDropdown}
+                aria-expanded={isMobileDropdownOpen}
+                className="dropdown-toggle"
+                style={{ cursor: "pointer" }}
+              >
+                Pages
+              </span>
+              <ul
+                className={`submenu transition-submenu ${
+                  isMobileDropdownOpen ? "open" : ""
+                }`}
+              >
                 <li>
-                  <a href="about.html">About Us</a>
+                  <span onClick={() => router.push("/about")}>About Us</span>
                 </li>
                 <li>
-                  <a href="contact.html">Contact Us</a>
+                  <span onClick={() => router.push("/contact")}>
+                    Contact Us
+                  </span>
                 </li>
                 <li>
-                  <a href="login.html">login</a>
+                  <span onClick={() => router.push("/login")}>Login</span>
                 </li>
                 <li>
-                  <a href="register.html">Register</a>
+                  <span onClick={() => router.push("/register")}>Register</span>
                 </li>
                 <li>
-                  <a href="cart.html">Shoping Cart</a>
+                  <span onClick={() => router.push("/cart")}>
+                    Shopping Cart
+                  </span>
                 </li>
                 <li>
-                  <a href="checkout.html">Checkout</a>
+                  <span onClick={() => router.push("/checkout")}>Checkout</span>
                 </li>
                 <li>
-                  <a href="wishlist.html">Wishlist</a>
+                  <span onClick={() => router.push("/wishlist")}>Wishlist</span>
                 </li>
               </ul>
             </li>
+
             <li>
-              <a href="contact.html">Contact</a>
+              <span onClick={() => router.push("/contact")}>Contact</span>
             </li>
           </ul>
         </nav>
         {/* side-mobile-menu end */}
       </aside>
-      <div className="body-overlay" />
+
+      {isMenuOpen && (
+        <div
+          className="body-overlay active"
+          onClick={handleMobileMenuClose}
+          style={{ cursor: "pointer" }}
+        />
+      )}
+
       {/* slide-bar end */}
       {/* Fullscreen search */}
       <div className="search-wrap">
