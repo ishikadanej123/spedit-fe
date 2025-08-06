@@ -1,6 +1,57 @@
+import ProductCard from "@/app/imports/shop/ui/components/ProductCard";
 import React from "react";
 
 const ShopHero = () => {
+  const products = [
+    {
+      id: "1",
+      name: "Loose Oversized Shirt",
+      price: "$29.50",
+      image: "/img/product/product-9.jpg",
+    },
+    {
+      id: "2",
+      name: "Cotton Jersey Loose",
+      price: "$50.50 - 75.99",
+      image: "/img/product/product-10.jpg",
+    },
+    {
+      id: "3",
+      name: "Cotton Jersey Top (Variable)",
+      price: "$29.50",
+      image: "/img/product/product-11.jpg",
+    },
+    {
+      id: "4",
+      name: "Loose Oversized Shirt",
+      price: "$29.50",
+      image: "/img/product/product-9.jpg",
+    },
+    {
+      id: "5",
+      name: "Cotton Jersey Loose",
+      price: "$50.50 - 75.99",
+      image: "/img/product/product-10.jpg",
+    },
+    {
+      id: "6",
+      name: "Loose Oversized Shirt",
+      price: "$29.50",
+      image: "/img/product/product-9.jpg",
+    },
+    {
+      id: "7",
+      name: "Cotton Jersey Loose",
+      price: "$50.50 - 75.99",
+      image: "/img/product/product-10.jpg",
+    },
+    {
+      id: "8",
+      name: "Loose Oversized Shirt",
+      price: "$29.50",
+      image: "/img/product/product-9.jpg",
+    },
+  ];
   return (
     <section className="shop-sidebar pt-75">
       <div className="container">
@@ -253,444 +304,25 @@ const ShopHero = () => {
                   role="tabpanel"
                   aria-labelledby="home-tab"
                 >
-                  <div className="row custom-row-10">
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-9.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Loose Oversized Shirt{" "}
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">$29.50</h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
+                  {Array.from(
+                    { length: Math.ceil(products.length / 2) },
+                    (_, rowIndex) => (
+                      <div
+                        key={rowIndex}
+                        style={{
+                          display: "flex",
+                          gap: "20px",
+                          marginBottom: "20px",
+                        }}
+                      >
+                        {products
+                          .slice(rowIndex * 2, rowIndex * 2 + 2)
+                          .map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                          ))}
                       </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-10.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Cotton Jersey Loose
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">$50.50 - 75.99</h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-11.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Cotton Jersey Top (Variable)
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">$29.50</h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-12.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Loose Oversized Shirt
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">
-                              $17.50 <del>$17.50</del>
-                            </h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-13.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Loose Oversized Shirt{" "}
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">$29.50</h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-14.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Cotton Jersey Loose
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">$50.50 - 75.99</h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-15.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Cotton Jersey Top (Variable)
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">$29.50</h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-sm-6 custom-col-10">
-                      <div className="product-wrapper mb-40">
-                        <div className="pro-img mb-20">
-                          <a href="product-details.html">
-                            <img
-                              src="img/product/product-16.jpg"
-                              className="img-fluid"
-                              alt=""
-                            />
-                          </a>
-                          <div className="product-action text-center">
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Shoppingb Cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Quick View"
-                            >
-                              <i className="fa-solid fa-eye"></i>
-                            </a>
-                            <a
-                              href="#"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              title="Compare"
-                            >
-                              <i className="fa-solid fa-exchange"></i>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="pro-text">
-                          <div className="pro-title">
-                            <h6>
-                              <a href="product-details.html">
-                                Loose Oversized Shirt
-                              </a>
-                            </h6>
-                            <h5 className="pro-price">
-                              $17.50 <del>$17.50</del>
-                            </h5>
-                          </div>
-                          <div className="cart-icon">
-                            <a href="cart.html">
-                              <i className="fa-solid fa-heart"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    )
+                  )}
                 </div>
                 <div
                   className="tab-pane fade"
@@ -702,7 +334,7 @@ const ShopHero = () => {
                     <div className="col-lg-4 col-sm-6 custom-col-10">
                       <div className="product-wrapper mb-30">
                         <div className="pro-img mb-20">
-                          <a href="product-details.html">
+                          <a href="product-details">
                             <img
                               src="img/product/product-9.jpg"
                               className="img-fluid"
@@ -717,7 +349,7 @@ const ShopHero = () => {
                         <div className="pro-text">
                           <div className="pro-title">
                             <h6>
-                              <a href="product-details.html">
+                              <a href="product-details">
                                 Loose Oversized Shirt{" "}
                               </a>
                             </h6>
@@ -764,7 +396,7 @@ const ShopHero = () => {
                     <div className="col-lg-4 col-sm-6 custom-col-10">
                       <div className="product-wrapper mb-30">
                         <div className="pro-img mb-20">
-                          <a href="product-details.html">
+                          <a href="product-details">
                             <img
                               src="img/product/product-9.jpg"
                               className="img-fluid"
@@ -779,7 +411,7 @@ const ShopHero = () => {
                         <div className="pro-text">
                           <div className="pro-title">
                             <h6>
-                              <a href="product-details.html">
+                              <a href="product-details">
                                 Loose Oversized Shirt{" "}
                               </a>
                             </h6>
@@ -826,7 +458,7 @@ const ShopHero = () => {
                     <div className="col-lg-4 col-sm-6 custom-col-10">
                       <div className="product-wrapper mb-30">
                         <div className="pro-img mb-20">
-                          <a href="product-details.html">
+                          <a href="product-details">
                             <img
                               src="img/product/product-9.jpg"
                               className="img-fluid"
@@ -841,7 +473,7 @@ const ShopHero = () => {
                         <div className="pro-text">
                           <div className="pro-title">
                             <h6>
-                              <a href="product-details.html">
+                              <a href="product-details">
                                 Loose Oversized Shirt{" "}
                               </a>
                             </h6>
@@ -888,7 +520,7 @@ const ShopHero = () => {
                     <div className="col-lg-4 col-sm-6 custom-col-10">
                       <div className="product-wrapper mb-30">
                         <div className="pro-img mb-20">
-                          <a href="product-details.html">
+                          <a href="product-details">
                             <img
                               src="img/product/product-9.jpg"
                               className="img-fluid"
@@ -903,7 +535,7 @@ const ShopHero = () => {
                         <div className="pro-text">
                           <div className="pro-title">
                             <h6>
-                              <a href="product-details.html">
+                              <a href="product-details">
                                 Loose Oversized Shirt{" "}
                               </a>
                             </h6>
@@ -950,7 +582,7 @@ const ShopHero = () => {
                     <div className="col-lg-4 col-sm-6 custom-col-10">
                       <div className="product-wrapper mb-30">
                         <div className="pro-img mb-20">
-                          <a href="product-details.html">
+                          <a href="product-details">
                             <img
                               src="img/product/product-9.jpg"
                               className="img-fluid"
@@ -965,7 +597,7 @@ const ShopHero = () => {
                         <div className="pro-text">
                           <div className="pro-title">
                             <h6>
-                              <a href="product-details.html">
+                              <a href="product-details">
                                 Loose Oversized Shirt{" "}
                               </a>
                             </h6>
