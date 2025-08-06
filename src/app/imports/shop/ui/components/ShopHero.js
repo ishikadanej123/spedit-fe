@@ -1,7 +1,9 @@
+"use client";
+import React, { useState } from "react";
 import ProductCard from "@/app/imports/shop/ui/components/ProductCard";
-import React from "react";
 
 const ShopHero = () => {
+  const [activeTab, setActiveTab] = useState("home");
   const products = [
     {
       id: "1",
@@ -256,28 +258,36 @@ const ShopHero = () => {
                   <ul className="nav shop-tabs" id="myTab" role="tablist">
                     <li className="nav-item">
                       <a
-                        className="nav-link active"
+                        className={`nav-link ${
+                          activeTab === "home" ? "active" : ""
+                        }`}
                         id="home-tab"
-                        data-toggle="tab"
-                        href="#home"
                         role="tab"
                         aria-controls="home"
-                        aria-selected="true"
+                        aria-selected={activeTab === "home"}
+                        onClick={() => setActiveTab("home")}
                       >
-                        <i className="fa-solid fa-th"></i>
+                        <i
+                          className="fa-solid fa-th"
+                          style={{ cursor: "pointer" }}
+                        ></i>
                       </a>
                     </li>
                     <li className="nav-item">
                       <a
-                        className="nav-link"
+                        className={`nav-link ${
+                          activeTab === "profile" ? "active" : ""
+                        }`}
                         id="profile-tab"
-                        data-toggle="tab"
-                        href="#profile"
                         role="tab"
                         aria-controls="profile"
-                        aria-selected="false"
+                        aria-selected={activeTab === "profile"}
+                        onClick={() => setActiveTab("profile")}
                       >
-                        <i className="fa-solid fa-list-ul"></i>
+                        <i
+                          className="fa-solid fa-list-ul"
+                          style={{ cursor: "pointer" }}
+                        ></i>
                       </a>
                     </li>
                   </ul>
@@ -299,7 +309,9 @@ const ShopHero = () => {
               </div>
               <div className="tab-content shop-tabs-content" id="myTabContent">
                 <div
-                  className="tab-pane fade show active"
+                  className={`tab-pane fade ${
+                    activeTab === "home" ? "show active" : ""
+                  }`}
                   id="home"
                   role="tabpanel"
                   aria-labelledby="home-tab"
@@ -325,7 +337,9 @@ const ShopHero = () => {
                   )}
                 </div>
                 <div
-                  className="tab-pane fade"
+                  className={`tab-pane fade ${
+                    activeTab === "profile" ? "show active" : ""
+                  }`}
                   id="profile"
                   role="tabpanel"
                   aria-labelledby="profile-tab"

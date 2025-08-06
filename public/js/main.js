@@ -158,9 +158,9 @@
     infinite: true,
     speed: 300,
     prevArrow:
-      '<button type="button" class="slick-prev"><i class="fa-solid fa-long-arrow-alt-left"></i><span>next</span></button>',
+      '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left-long"></i><span>next</span></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><i class="fa-solid fa-long-arrow-alt-right"></i><span>prev</span></button>',
+      '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right-long"></i><span>prev</span></button>',
     slidesToShow: 1,
     slidesToScroll: 1,
   });
@@ -224,9 +224,9 @@
     infinite: true,
     speed: 300,
     prevArrow:
-      '<button type="button" class="slick-prev w-fit"><i class="fa-solid fa-long-arrow-alt-left"></i></button>',
+      '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left-long"></i><span>next</span></button>',
     nextArrow:
-      '<button type="button" class="slick-next w-fit"><i class="fa-solid fa-long-arrow-alt-right"></i></button>',
+      '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right-long"></i><span>prev</span></button>',
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
@@ -258,9 +258,9 @@
     infinite: true,
     speed: 300,
     prevArrow:
-      '<button type="button" class="slick-prev"><i class="far fa-long-arrow-alt-left"></i><span>next</span></button>',
+      '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left-long"></i><span>next</span></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><i class="far fa-long-arrow-alt-right"></i><span>prev</span></button>',
+      '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right-long"></i><span>prev</span></button>',
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -293,9 +293,9 @@
     infinite: true,
     speed: 300,
     prevArrow:
-      '<button type="button" class="slick-prev"><i class="far fa-long-arrow-alt-left"></i></button>',
+      '<button type="button" class="slick-prev"><i class="fa-solid fa-arrow-left-long"></i></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><i class="far fa-long-arrow-alt-right"></i></button>',
+      '<button type="button" class="slick-next"><i class="fa-solid fa-arrow-right-long"></i></button>',
     slidesToShow: 1,
     slidesToScroll: 1,
   });
@@ -308,9 +308,9 @@
     infinite: true,
     speed: 300,
     prevArrow:
-      '<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+      '<button type="button" class="slick-prev"><i class="fal fa-chevron-left"></i></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+      '<button type="button" class="slick-next"><i class="fal fa-chevron-right"></i></button>',
     slidesToShow: 8,
     slidesToScroll: 1,
     responsive: [
@@ -474,7 +474,7 @@
     animation: "fade", // Fade, slide, none
     animationInSpeed: 200, // Animation in speed (ms)
     animationOutSpeed: 200, // Animation out speed (ms)
-    scrollText: '<i class="fa-solid fa-chevron-up"></i>', // Text for element
+    scrollText: '<i class="fa-solid fa-chevron-up"></i>',
     activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
   });
 

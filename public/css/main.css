@@ -349,17 +349,17 @@ a.common-link:hover {
 /*common arrows style*/
 .common-arrows button.slick-prev,
 .common-arrows button.slick-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -50px;
-  font-size: 30px;
-  color: #ccc;
-  border: none;
-  background: none;
-  cursor: pointer;
-  z-index: 8;
-  transition: all linear 0.4s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -50px;
+    font-size: 30px;
+    color: #ccc;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 8;
+    transition: all linear 0.4s;
 }
 
 .common-arrows button.slick-prev {
@@ -438,6 +438,9 @@ a.common-link:hover {
 .basic-bar.hamburger-menu a {
   margin: 0;
   display: inline-block;
+}
+.hamburger-menu span{
+  font-size:30px
 }
 .basic-bar span {
   width: 17px;
@@ -5392,11 +5395,11 @@ p.checkout-coupon input[type="text"] {
 .side-mobile-menu ul li ul li {
   padding-left: 15px;
 }
-.side-mobile-menu ul li ul li:hover > a {
+.side-mobile-menu ul li ul li:hover > span {
   color: #3e976c;
   padding-left: 20px;
 }
-.side-mobile-menu ul li ul li:hover > a:before {
+.side-mobile-menu ul li ul li:hover > span:before {
   background: #3e976c;
   border-color: #3e976c;
 }

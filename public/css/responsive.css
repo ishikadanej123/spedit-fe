@@ -451,7 +451,7 @@
   .header-features span {
     padding: 8px 14px;
   }
-  .header-left-icon a {
+  .header-left-icon span {
     margin-left: 25px;
   }
   .custom-row {
@@ -1150,7 +1150,7 @@
   .logo img {
     width: 95px;
   }
-  .header-left-icon a {
+  .header-left-icon span {
     margin-left: 12px;
   }
   .header-6-padd {
@@ -1163,7 +1163,7 @@
 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .header-left-icon a {
+  .header-left-icon span {
     margin-left: 30px;
   }
   .header-features span {
