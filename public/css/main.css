@@ -3522,22 +3522,20 @@ html .ui-button.ui-state-disabled:active {
   position: relative;
   display: inline-block;
 }
-.testimonial-img::after {
+
+.testimonial-img .quote-icon {
   position: absolute;
-  content: "\f10d";
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 700;
+  top: 5px;
+  right: 5px;
   background: #005046;
   height: 30px;
   width: 30px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   color: #fff;
-  font-size: 12px;
-  line-height: 30px;
-  text-align: center;
-  right: 0;
-  top: 2px;
+  font-size: 14px;
 }
 .testimonial-text {
 }

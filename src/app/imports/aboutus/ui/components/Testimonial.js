@@ -24,6 +24,7 @@ const Testimonial = () => {
                 <div className="testimonial-wrapper text-center">
                   <div className="testimonial-img">
                     <img src="img/testimonial/test.png" alt="" />
+                    <i className="fa-solid fa-quote-left quote-icon"></i>
                   </div>
                   <div className="testimonial-text">
                     <h3>Johan D. William</h3>
@@ -40,6 +41,7 @@ const Testimonial = () => {
                 <div className="testimonial-wrapper text-center">
                   <div className="testimonial-img">
                     <img src="img/testimonial/test.png" alt="" />
+                    <i className="fa-solid fa-quote-left quote-icon"></i>
                   </div>
                   <div className="testimonial-text">
                     <h3>Johan D. William</h3>
@@ -56,6 +58,7 @@ const Testimonial = () => {
                 <div className="testimonial-wrapper text-center">
                   <div className="testimonial-img">
                     <img src="img/testimonial/test.png" alt="" />
+                    <i className="fa-solid fa-quote-left quote-icon"></i>
                   </div>
                   <div className="testimonial-text">
                     <h3>Johan D. William</h3>
@@ -72,6 +75,7 @@ const Testimonial = () => {
                 <div className="testimonial-wrapper text-center">
                   <div className="testimonial-img">
                     <img src="img/testimonial/test.png" alt="" />
+                    <i className="fa-solid fa-quote-left quote-icon"></i>
                   </div>
                   <div className="testimonial-text">
                     <h3>Johan D. William</h3>
