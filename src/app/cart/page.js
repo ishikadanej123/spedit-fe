@@ -1,10 +1,10 @@
 import React from "react";
-import ConatactPage from "../imports/contact/ui/page/ConatactPage";
+import ShopingCartPage from "../imports/shoppingcart/ShopingCartPage";
 
 const page = () => {
   return (
     <div>
-      <ConatactPage />
+      <ShopingCartPage />
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import React from "react";
-import ConatactPage from "../imports/contact/ui/page/ConatactPage";
+import RegisterPage from "../imports/register/RegisterPage";
 
 const page = () => {
   return (
     <div>
-      <ConatactPage />
+      <RegisterPage />
     </div>
   );
 };

@@ -30,7 +30,7 @@ body {
   font-size: 14px;
 }
 .container {
-  max-width: 1430px !important;
+  max-width: 1430px;
 }
 .img {
   max-width: 100%;
@@ -350,7 +350,7 @@ a.common-link:hover {
 .common-arrows button.slick-prev,
 .common-arrows button.slick-next {
   position: absolute;
-  top: 27%;
+  top: 50%;
   transform: translateY(-50%);
   left: -50px;
   font-size: 30px;
@@ -3606,6 +3606,12 @@ html .ui-button.ui-state-disabled:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.contact_page {
+  @media (max-width: 956px) {
+    padding-top: 70px !important;
+  }
+}
 .contact__input {
   width: 100%;
   border: 1px solid transparent;
@@ -4658,6 +4664,7 @@ ul.cat li a:hover {
   color: #6f7172;
   padding: 0 20px;
   margin-bottom: 20px;
+  background-color: white;
 }
 
 .basic-login label {
@@ -4672,6 +4679,7 @@ ul.cat li a:hover {
 .login-action input {
   width: inherit;
   height: auto;
+  background: white;
 }
 
 .login-action label {
@@ -4802,6 +4810,8 @@ ul.cat li a:hover {
   border: 2px solid #eaedff;
   padding: 0 15px;
   margin-right: 10px;
+  background: white;
+  color: black;
 }
 
 @media (max-width: 767px) {
@@ -4862,20 +4872,16 @@ td.product-thumbnail img {
   font-size: 14px;
   font-weight: 400;
   margin: 0 0 25px;
-  padding: 1em 2em 1em 3.5em;
+  padding: 1em 2em 1em 1.5em;
   position: relative;
   width: auto;
 }
 
-.coupon-accordion h3::before {
-  content: "\f07b";
+/* .coupon-accordion h3.i {
   left: 15px;
   top: 13px;
   position: absolute;
-  color: #6f7172;
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 700;
-}
+} */
 
 .coupon-accordion span {
   color: #6f7172;
@@ -5012,9 +5018,10 @@ p.checkout-coupon input[type="text"] {
   padding-left: 10px;
   width: 100%;
   color: #6f7172;
+  background: white;
 }
 
-.country-select::before {
+/* .country-select::before {
   content: "\f107";
   right: 15px;
   top: 38px;
@@ -5022,7 +5029,7 @@ p.checkout-coupon input[type="text"] {
   color: #6f7172;
   font-family: "Font Awesome 5 Pro";
   font-weight: 700;
-}
+} */
 
 .checkout-form-list {
   margin-bottom: 30px;
@@ -5041,6 +5048,7 @@ p.checkout-coupon input[type="text"] {
   height: 45px;
   padding: 0 0 0 10px;
   width: 100%;
+  color: black;
 }
 
 .checkout-form-list input[type="text"]::-moz-placeholder,
@@ -5084,6 +5092,8 @@ p.checkout-coupon input[type="text"] {
   height: 90px;
   padding: 15px;
   width: 100%;
+  background: white;
+  color: black;
 }
 
 .order-notes textarea::-moz-placeholder {
@@ -5521,4 +5531,4 @@ p.checkout-coupon input[type="text"] {
   }
 }
 
-/*--- end of preloader ---*/
+/*--- end of preloader ---*

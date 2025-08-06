@@ -1,10 +1,10 @@
 import React from "react";
-import ConatactPage from "../imports/contact/ui/page/ConatactPage";
+import WishList from "../imports/wishlistPage/WishList";
 
 const page = () => {
   return (
     <div>
-      <ConatactPage />
+      <WishList />
     </div>
   );
 };

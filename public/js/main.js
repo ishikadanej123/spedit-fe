@@ -224,9 +224,9 @@
     infinite: true,
     speed: 300,
     prevArrow:
-      '<button type="button" class="slick-prev w-fit"><i class="fa-solid fa-long-arrow-alt-left"></i><span>next</span></button>',
+      '<button type="button" class="slick-prev w-fit"><i class="fa-solid fa-long-arrow-alt-left"></i></button>',
     nextArrow:
-      '<button type="button" class="slick-next w-fit"><i class="fa-solid fa-long-arrow-alt-right"></i><span>prev</span></button>',
+      '<button type="button" class="slick-next w-fit"><i class="fa-solid fa-long-arrow-alt-right"></i></button>',
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
